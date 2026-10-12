@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>am.sir - store | Jelajahi Dirimu!</title>
+
+  <!-- Poin 1: Memasang Bootstrap 5 melalui CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #172a46;
+      --navy-light: #243d60;
+      --cream: #f8f5ee;
+      --gold: #d7b779;
+      --text: #263244;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+      background-color: var(--navy);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, .82);
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      color: var(--gold);
+    }
+
+    .hero {
+      background: linear-gradient(120deg, var(--navy), var(--navy-light));
+      color: white;
+      padding: 5rem 0;
+    }
+
+    .hero-label {
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    .btn-brand {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .btn-brand:hover {
+      background: #c8a45f;
+      border-color: #c8a45f;
+      color: var(--navy);
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .product-card {
+      height: 100%;
+      border: 1px solid #e9e2d5;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 1rem 2rem rgba(23, 42, 70, .1);
+    }
+
+    .product-visual {
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eee7d9;
+      color: var(--navy);
+      font-size: 3.5rem;
+    }
+
+    .price {
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .contact-panel {
+      background: white;
+      border: 1px solid #e9e2d5;
+      border-radius: 1rem;
+    }
+
+    .form-control:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 .25rem rgba(215, 183, 121, .25);
+    }
+
+    footer {
+      background: var(--navy);
+      color: rgba(255, 255, 255, .8);
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        padding: 3.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Poin 2: Navbar dan container -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#beranda">am.sir - store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#menuNavigasi" aria-controls="menuNavigasi"
+        aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuNavigasi">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produk">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <p class="hero-label mb-3">Kenali dirimu!</p>
+            <h1 class="display-4 fw-bold mb-3">Temukan semuanya disini!</h1>
+            <p class="lead mb-4">
+              Pilihan sederhana untuk menemani aktivitasmu, dari perlengkapan harian
+              sampai benda kecil yang membuat hari terasa lebih bermakna.
+            </p>
+            <a href="#produk" class="btn btn-brand btn-lg">Jelajahi Produk</a>
+          </div>
+          <div class="col-lg-5">
+            <div class="p-4 p-md-5 rounded-4 text-center"
+              style="background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);">
+              <div style="font-size: 5rem;" aria-hidden="true">a.s</div>
+              <h2 class="h4 mt-2">Mudah, praktis, & elegan</h2>
+              <p class="mb-0 text-white-50">Temukan pilihan yang cocok untuk keseharianmu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Poin 3: Tiga card produk dengan grid responsif col-md-4 -->
+    <section class="py-5" id="produk">
+      <div class="container py-3">
+        <div class="text-center mb-4">
+          <p class="hero-label mb-2" style="color: #9a783c;">Pilihan untukmu</p>
+          <h2 class="section-title display-6">Produk Unggulan</h2>
+          <p class="text-secondary">Barang sederhana untuk mendukung aktivitas sehari-hari.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card">
+              <div class="product-visual" aria-hidden="true">
+                <img src="GambarTotebag.jpg" alt="Canvas Tote Bag"
+                style="height: 220px; object-fit: cover;">
+              </div>
+              <div class="card-body d-flex flex-column p-4">
+                <h3 class="card-title h5">Canvas Tote Bag</h3>
+                <p class="card-text text-secondary">Tas serbaguna untuk kuliah, bekerja, atau bepergian.</p>
+                <div class="mt-auto">
+                  <p class="price mb-3">Rp75.000</p>
+                  <a href="#kontak" class="btn btn-outline-primary w-100">Tanya Produk</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <div class="product-visual" aria-hidden="true">
+                <img src="GambarTumbler.jpg" alt="Daily Bottle"
+                style="height: 220px; object-fit: cover;">
+              </div>
+              <div class="card-body d-flex flex-column p-4">
+                <h3 class="card-title h5">Daily Bottle</h3>
+                <p class="card-text text-secondary">Botol minum praktis untuk menemani kegiatanmu.</p>
+                <div class="mt-auto">
+                  <p class="price mb-3">Rp45.000</p>
+                  <a href="#kontak" class="btn btn-outline-primary w-100">Tanya Produk</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card">
+              <div class="product-visual" aria-hidden="true">
+                <img src="GambarNotebook.jpg" alt="Daily Notes"
+                style="height: 220px; object-fit: cover;">
+              </div>
+              <div class="card-body d-flex flex-column p-4">
+                <h3 class="card-title h5">Daily Notes</h3>
+                <p class="card-text text-secondary">Buku catatan untuk ide, rencana, dan cerita harianmu.</p>
+                <div class="mt-auto">
+                  <p class="price mb-3">Rp30.000</p>
+                  <a href="#kontak" class="btn btn-outline-primary w-100">Tanya Produk</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section class="py-5" id="tentang" style="background: #eee7d9;">
+      <div class="container py-3">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="section-title mb-3">Tentang kami</h2>
+            <p class="mb-0">
+              am.sir - store merupakan toko online untuk barang-barang pilihan
+              yang praktis dan dekat dengan keseharian serta selalu ringan dalam menjalani aktivitas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Poin 4: Form dengan form-label dan form-control -->
+    <section class="py-5" id="kontak">
+      <div class="container py-3">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="contact-panel p-4 p-md-5 shadow-sm">
+              <div class="mb-4">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p class="text-secondary mb-0">Silahkan isi formulir berikut.</p>
+              </div>
+
+              <form id="formKontak">
+                <div class="mb-3">
+                  <label for="nama" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="nama" name="nama"
+                    placeholder="Nama Lengkap" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email"
+                    placeholder="xxxx@gmail.com" required>
+                </div>
+                <div class="mb-3">
+                  <label for="pesan" class="form-label">Pesan</label>
+                  <textarea class="form-control" id="pesan" name="pesan" rows="4"
+                    placeholder="Tulis pesan di sini..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-brand">Kirim Pesan</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span class="fw-bold">am.sir - store</span>
+      <span class="small">© 2026 am.sir - store.</span>
+    </div>
+  </footer>
+
+  <!-- Poin 5: konfirmasi Bootstrap -->
+  <div class="modal fade" id="modalKonfirmasi" tabindex="-1"
+    aria-labelledby="judulModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="judulModal">Konfirmasi Pengiriman</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          Apakah Anda yakin ingin mengirim pesan ini?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-primary" id="tombolKirim">Ya, Kirim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle diperlukan agar navbar dan modal dapat berfungsi -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const formKontak = document.getElementById("formKontak");
+    const elemenModal = document.getElementById("modalKonfirmasi");
+    const modalKonfirmasi = new bootstrap.Modal(elemenModal);
+    const tombolKirim = document.getElementById("tombolKirim");
+
+    formKontak.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (formKontak.checkValidity()) {
+        modalKonfirmasi.show();
+      } else {
+        formKontak.reportValidity();
+      }
+    });
+
+    tombolKirim.addEventListener("click", function () {
+      modalKonfirmasi.hide();
+      alert("Terima kasih! Pesan berhasil terkirim.");
+      formKontak.reset();
+    });
+  </script>
+</body>
+</html>
